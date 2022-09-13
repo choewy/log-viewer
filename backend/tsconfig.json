@@ -23,6 +23,7 @@
       "@core": ["src/_core"],
       "@core/*": ["src/_core/*"],
       "@util": ["src/_utils"],
+      "@util/*": ["src/_utils/*"],
       "@entity": ["src/_entities"],
       "@module": ["src/_modules"]
     }
