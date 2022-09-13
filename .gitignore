@@ -1,6 +1,5 @@
 **node_modules
 **certificate
-**envs
 **.env**
 
 !.env.md
