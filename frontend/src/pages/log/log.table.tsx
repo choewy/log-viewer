@@ -8,7 +8,7 @@ import { logsState } from '@/states/logs.state';
 
 export const LogTable: FC = () => {
   const navigate = useNavigate();
-  const { logs } = useRecoilValue(logsState);
+  const { rows } = useRecoilValue(logsState);
 
   return (
     <TableContainer
@@ -23,11 +23,11 @@ export const LogTable: FC = () => {
       <Table>
         <LogTableHead />
         <TableBody>
-          {logs.map((log) => {
+          {rows.map((row) => {
             return (
               <LogTableRow
-                key={JSON.stringify(log)}
-                log={log}
+                key={JSON.stringify(row)}
+                row={row}
                 navigate={navigate}
               />
             );

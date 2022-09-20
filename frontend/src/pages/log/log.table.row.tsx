@@ -18,12 +18,12 @@ import { LogData } from '@/states/logs.state';
 
 interface Props {
   navigate: NavigateFunction;
-  log: LogData;
+  row: LogData;
 }
 
 export const LogTableRow: FC<Props> = ({
   navigate,
-  log: {
+  row: {
     id,
     createdAt,
     type,

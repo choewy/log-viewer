@@ -5,6 +5,7 @@ import {
   LogOrders,
   LogQueryState,
   logQueryState,
+  LogTarget,
   LogTypes,
 } from '@/states';
 import { useNavigate } from 'react-router-dom';
@@ -29,11 +30,13 @@ export const useSetLogQuery = ({ page }: UseSetLogQueryProps) => {
       const take = searchParams.get('take');
       const order = searchParams.get('order') as LogOrders;
       const type = searchParams.get('type') as LogTypes;
+      const target = searchParams.get('target') as LogTarget;
       setLogQuery({
         page: page ? parseInt(page) : 1,
         take: take ? parseInt(take) : 10,
         order: order ? order : 'desc',
         type: type ? type : '',
+        target: target ? target : 'stickybomb-admin',
       });
       return () => {
         effectRef.current = true;

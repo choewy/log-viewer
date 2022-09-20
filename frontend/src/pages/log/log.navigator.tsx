@@ -18,6 +18,7 @@ export const LogNavigator = () => {
           take: 10,
           type: '',
           order: 'desc',
+          target: 'stickybomb-admin',
         },
         setLogQuery,
         navigate,

@@ -11,7 +11,7 @@ import { LogSearchForm } from './log.search.form';
 export const LogPage: FC = () => {
   const { page } = useParams<{ page: string }>();
   const logQuery = useRecoilValue(logQueryState);
-  const { totalCount } = useRecoilValue(logsState);
+  const { count } = useRecoilValue(logsState);
 
   useSetLogQuery({ page: page as string });
   useCallLogs({ logQuery });
@@ -28,7 +28,7 @@ export const LogPage: FC = () => {
     >
       <h1>LOG PAGE</h1>
       <div>
-        <h3>TOTAL : {totalCount}</h3>
+        <h3>TOTAL : {count}</h3>
       </div>
       <LogSearchForm />
       <LogTable />

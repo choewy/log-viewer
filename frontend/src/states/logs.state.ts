@@ -21,14 +21,14 @@ export interface LogData {
 }
 
 export interface LogsState {
-  totalCount: number;
-  logs: LogData[];
+  count: number;
+  rows: LogData[];
 }
 
 export const logsState = atom<LogsState>({
   key: 'logs',
   default: {
-    totalCount: 0,
-    logs: [],
+    count: 0,
+    rows: [],
   },
 });
